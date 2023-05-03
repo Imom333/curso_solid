@@ -1,0 +1,167 @@
+Practicar y aprender buenas prácticas para el manejo del código, reduciendo la reuda técnica
+
+Sitio donde muestra referencias del curso
+https://refactoring.guru/
+
+Respositorio del curso
+https://github.com/Klerith/clean-course/tree/main
+
+Deuda técnica: Falta de calidad en el código, proceso o desarrollo de software
+Dicha deuda generará costos a futuro, por ejemplo:
+    Tiempo en realizar mantenimiento
+    Tiempo en refactorizar código
+    Tiempo en comprender código
+    Tiempo adición en transferir el conocimiento del código
+
+Tipos de dudas:
+    Imprudente: no hay tiempo solo es copiar y pegar código - conciente pero imprudente
+    Inadvertido: Se genera por desconocimiento o falta de experiencia - no conciente
+    Prudente y deliverada: Se tiene que dar resultados, despues refactorizamos
+    Prudente e inadvertida: Ahora se sabe cómo se hace y se evitará
+
+Refactorización
+Proceso para mejorar el código (sin alterar comportamiento) para que ser mas entendible y tolerante a cambios
+Debe contar con pruebas automáticas
+
+Clean Code:
+Es el código que fue diseñado para ser entendible por uno u otra persona ya sea ahora o en el futuro
+Código simple y directo
+Programar es el arte de decirle a otra persona lo que quieres que haga la computadora
+
+
+
+
+Nombres pronunciales y expresivos
+    Nombres en ingles
+    Nombres pronunciables
+    Tarea: https://gist.github.com/Klerith/625ef0d0a501f716ed5e3dbdf88396db
+
+Nombres de las variables por tipo de dato
+    Arreglos: Arreglo de frutas *
+        fruitList
+        fruits
+        fruitsNames
+    Boleanos: 
+        Ser positivos y evitar negaciones en el nombre
+        Usar is can has
+    Numeros:
+        Usar min max total totalOf
+    Funciones:
+        SI - verboSustantivo
+        NO - verboSustantivoAdjetivos
+        NO - verboSustantivoAdjetivosCondicion
+    Tarea: https://gist.github.com/Klerith/7599f1637cc683ef59a03fd1c40d53d0
+
+Clases
+    Vericar que el nombre de la caalse es lo mas importante
+    Formado por:
+        Frases de sustantivo
+        Sustantivo
+    No deben ser muy genéricos
+    Usar UpperCameICase
+ 
+    ¿Qué hace la clase?
+    ¿Cómo realiza la tarea?
+    ¿Algo específico sobre su ubicación?
+
+Funciones
+    Realizar en la función solo lo que debe hacer la función
+    Enviar 3 o 1 argumentos en la función
+    Tarea: https://gist.github.com/Klerith/d9278895ff5dcacf6f1001d447fb443a
+
+    Simplicidad de la función
+    Funciones cont amaño reducido
+    No causar complejidad en una sola línea de código
+    Menos de 20 líneas
+    Evitar uso de else
+    Priorizar el uso de la condicional ternaria
+    Tarea: https://gist.github.com/Klerith/42d6d3a2ce5585d701afc67ca7a4a325
+
+    Tarea: https://gist.github.com/Klerith/b82113ad05830cd2880ec3bc1d0108ca
+    
+Principio DRY
+Don't Repeat Yourself
+    Evitar tener duplicidad de código
+    DImplifica las pruebas
+    Ayuda a centralizar procesos
+    Lleva a refactorizar
+
+Principio de responsabilidad única:
+    Cada función o clase, debe que hacer solo para lo que fue creadas
+    06-clases-a
+    https://gist.github.com/Klerith/787da77f48c6e513e8326ffe7bce059a
+    Tarea
+    07-tarea
+    https://gist.github.com/Klerith/8f69dd971ea830497cd3aa49bc9df51a
+
+Estructura de las clases
+    propiedades estáticas
+    propiedades públicas
+    propiedades privadas
+    constructores estáticos
+    constructores  privados
+    métodos estáticos
+    métodos privados
+    métodos ordenados de mayor a menor importancia
+    getters y setters
+
+Los comentarios deben dar explicación, evitando comentar código mal escrito
+Priorizar el porqué
+
+Se sigue un estandar en carpetas y archivos
+/product-list
+    product-list.css
+    product-list.html
+Visualizar la identaci
+
+STUPID
+CodeSmells - Antipatrones
+6 CodeSmells
+Singleton - Una instancia global, puede ser modificar por cualquiera, dificil de rastrear y probar
+https://gist.github.com/Klerith/5fd1516d139e13b8355bedc15d1c8b7b
+
+
+Tight Coupling - Alto acomplamiento y baja cohecion
+Lo correcto es tener bajo acomplamiento y alta cohecion
+Involucra mayor esfuerzo al realiar cambios
+Dificil agregar módulos
+Dificil reutilizacion
+Coheción: Lo que hace el módulo, si es baja coheción hace muchas acciones y no solo hace lo que debería
+Acoplamiento: Es cuán relacionados estan los módulos entre sí, bajo acoplamiento permite modificar un módulo sin afectar otro
+
+https://gist.github.com/Klerith/1cdbbe863df646b043a437df97eebb01
+
+Untestability No testeable
+
+Premature - Optimizaciones prematuras, creación de complejidad accidental, una solución no necesaria, lo contrario de la complejidad esencial
+
+Indescriptive - Nombres poco descriptivos
+
+Duplication - Duplicar codigo, no aplicar DRY
+
+Otros:
+    Inflación de código
+        Funcione smuy grandes
+        Clases muy grandes
+    Obseción primitiva
+    Lista larga de parámetros
+        + De 3 o 4 argumntos
+Acopladores:
+    Feacture Eny
+        Cuando una funcion u objeto hace referencia mayormente a otro módulo
+    Intimidad inapropiada
+        Las clases debens er sepraradas
+    Cadenas de mensajes
+        Cuandos e mandan a llamar muchas clases para una sola en vezz de un acceso directo
+    The middle man
+
+SOLID
+    Single Responsibility: Responsabilidad única - realizar componentes con una fuente de cambio
+    Open and CLose: Abierto y cerrado
+    Liskov Substitution: Sustitución Liskov
+    Interface segregation: Segregación de interfaz
+    Dependency inversion: INversión de dependencias
+
+Single Responsibility
+https://gist.github.com/Klerith/644f0dc4c898370308e029f15224f4f0
+
